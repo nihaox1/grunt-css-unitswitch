@@ -1,0 +1,25 @@
+{
+  "name": "grunt-css-unitswitch",
+  "version": "0.0.1",
+  "description": "switch css unit",
+  "main": "tasks/unit.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nihaox1/grunt-css-unitswitch.git"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2"
+  },
+  "keywords": [
+    "css-unitswitch"
+  ],
+  "author": "bo.cheng",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nihaox1/grunt-css-unitswitch/issues"
+  },
+  "homepage": "https://github.com/nihaox1/grunt-css-unitswitch#readme"
+}
