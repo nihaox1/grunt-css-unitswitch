@@ -1,6 +1,6 @@
 {
   "name": "grunt-css-unitswitch",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "switch css unit",
   "main": "tasks/unit.js",
   "scripts": {
