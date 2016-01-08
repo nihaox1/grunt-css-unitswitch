@@ -8,15 +8,25 @@ Unit    = function( opt ){
     grunt.file.mkdir( Path.resolve( this.opt.dist ) );
     if( opt.remUnit ){
         grunt.file.recurse( Path.resolve( this.opt.cwd ) , function( filePath , dir , type , fileName ){
-            _self.handlerFiles( filePath , fileName , "rem" );
+            if( _self.checkReg( fileName ) ){
+                _self.handlerFiles( filePath , fileName , "rem" );
+            }
         } );
     }
 }
 
 Unit.prototype  = {
-    writeFile   : function( dist , str ){
-
-        return this;
+    checkReg        : function( fileName ){
+        var _reg ,
+            _go     = false;
+        for( var i = this.opt.src.length; i--; ){
+            _reg    = new RegExp( this.opt.src[ i ] );
+            if( _reg.test( fileName ) ){
+                _go     = true;
+                break;
+            }
+        }
+        return _go;
     } ,
     handlerFiles    : function( filePath , fileName , type ){
         var _file   = grunt.file.read( filePath , "utf-8" ) ,
